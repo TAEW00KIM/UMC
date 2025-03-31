@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Post</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Update Post</h1>
+  <form th:action="@{'/boards/update/' + ${board.id}}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <label>Title: <input type="text" name="title" th:value="${board.title}" required/></label><br/>
+    <label>Content: <textarea name="content" required th:text="${board.content}"></textarea></label><br/>
+    <button type="submit">Update</button>
+  </form>
+  <a th:href="@{/boards/list}">Back to List</a>
+</div>
+</body>
+</html>
