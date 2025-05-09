@@ -8,6 +8,9 @@ import com.taewoo.study.domain.mapping.MemberMission;
 import com.taewoo.study.domain.mapping.MemberPrefer;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -15,6 +18,8 @@ import java.util.List;
 
 @Entity
 @Getter
+@DynamicUpdate
+@DynamicInsert
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -37,6 +42,9 @@ public class Member extends BaseEntity {
     @Column(columnDefinition = "VARCHAR(10)")
     private Gender gender;
 
+    @Column(nullable = false)
+    private Integer age;
+
     @Enumerated(EnumType.STRING)
     private SocialType socialType;
 
@@ -44,14 +52,17 @@ public class Member extends BaseEntity {
     @Column(columnDefinition = "VARCHAR(15) DEFAULT 'ACTIVE'")
     private MemberStatus memberStatus;
 
-    @Column(nullable = false, length = 50)
+    // @Column(nullable = false, length = 50)
     private String email;
 
+    @ColumnDefault("0")
+    private Integer point;
+
     @Column(nullable = false)
+    @ColumnDefault("'010-0000-0000'")
     private String phone;
 
     private LocalDate inactiveDate;
-    private Integer point;
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberAgree> memberAgreeList = new ArrayList<>();

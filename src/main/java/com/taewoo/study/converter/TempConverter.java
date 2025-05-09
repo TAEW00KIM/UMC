@@ -1,6 +1,6 @@
 package com.taewoo.study.converter;
 
-import com.taewoo.study.web.dto.TempResponse;
+import com.taewoo.study.web.dto.tempDto.TempResponse;
 
 public class TempConverter {
     public static TempResponse.TempTestDTO toTempTestDTO() {

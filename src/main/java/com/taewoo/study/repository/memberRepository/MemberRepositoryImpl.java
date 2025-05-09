@@ -3,7 +3,7 @@ package com.taewoo.study.repository.memberRepository;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.taewoo.study.domain.QMember;
-import com.taewoo.study.web.dto.MemberInfoDto;
+import com.taewoo.study.web.dto.memberDto.MemberInfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

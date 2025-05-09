@@ -1,7 +1,7 @@
 package com.taewoo.study.service.memberService;
 
 import com.taewoo.study.repository.memberRepository.MemberRepository;
-import com.taewoo.study.web.dto.MemberInfoDto;
+import com.taewoo.study.web.dto.memberDto.MemberInfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +14,6 @@ public class MemberQueryServiceImpl implements MemberQueryService {
 
     @Override
     public MemberInfoDto findMemberInfoById(Long memberId) {
-        return memberRepository.findMemberInfoById(memberId);
+        return null;
     }
 }

@@ -3,7 +3,7 @@ package com.taewoo.study.web.controller;
 import com.taewoo.study.apiPayload.ApiResponse;
 import com.taewoo.study.converter.TempConverter;
 import com.taewoo.study.service.tempService.TempQueryService;
-import com.taewoo.study.web.dto.TempResponse;
+import com.taewoo.study.web.dto.tempDto.TempResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

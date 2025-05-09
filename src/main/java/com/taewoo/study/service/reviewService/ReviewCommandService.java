@@ -1,7 +1,9 @@
 package com.taewoo.study.service.reviewService;
 
 import com.taewoo.study.domain.Review;
+import com.taewoo.study.web.dto.reviewDto.ReviewRequestDTO;
+import jakarta.validation.Valid;
 
 public interface ReviewCommandService {
-    Review saveReview(Long memberId, Long storeId, String body, Float score);
+    Review createReview(@Valid ReviewRequestDTO.CreateDTO request);
 }

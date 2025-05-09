@@ -4,7 +4,130 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c0a5eb6-abcc-4213-ad25-9dea8edecbb8" name="Changes" comment="" />
+    <list default="true" id="7c0a5eb6-abcc-4213-ad25-9dea8edecbb8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_18_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_swagger_core_v3_swagger_annotations_jakarta_2_2_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_swagger_core_v3_swagger_core_jakarta_2_2_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_swagger_core_v3_swagger_models_jakarta_2_2_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_17_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jspecify_jspecify_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springdoc_springdoc_openapi_starter_common_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springdoc_springdoc_openapi_starter_webmvc_api_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springdoc_springdoc_openapi_starter_webmvc_ui_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_swagger_ui_5_18_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_webjars_webjars_locator_lite_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/exception/handler/FoodCateoryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/exception/handler/MemberHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/exception/handler/MemberMissionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/exception/handler/MissionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/exception/handler/RegionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/exception/handler/StoreHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/converter/MemberConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/converter/MemberMissionConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/converter/MemberPreferConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/converter/MissionConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/converter/ReviewConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/converter/StoreConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/foodCategoryRepository/FoodCategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/regionRepository/RegionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberService/MemberCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberService/MemberCommandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/missionService/MissionCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/missionService/MissionCommandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/storeService/StoreCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/storeService/StoreCommandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/validation/annotation/ExistCategories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/validation/annotation/ExistRegion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/validation/annotation/ExistStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/validation/annotation/NotAlreadyChallenging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/validation/validator/CategoriesExistValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/validation/validator/NotAlreadyChallengingValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/validation/validator/RegionExistValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/validation/validator/StoreExistValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/controller/MemberMissionRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/controller/MemberRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/controller/MissionRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/controller/ReviewRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/controller/StoreRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/memberDto/MemberRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/memberDto/MemberResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/memberMissionDto/MissionChallengeRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/memberMissionDto/MissionChallengeResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/missionDto/MissionRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/missionDto/MissionResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/reviewDto/ReviewRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/reviewDto/ReviewResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/storeDto/StoreRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/storeDto/StoreResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/study.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/study.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/study.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/study.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/apiPayload/code/status/ErrorStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/apiPayload/code/status/ErrorStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/apiPayload/exception/ExceptionAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/apiPayload/exception/ExceptionAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/converter/TempConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/converter/TempConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/Member$MemberBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/Member$MemberBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/QMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/QMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/enums/Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/enums/Gender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/mapping/MemberMission$MemberMissionBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/mapping/MemberMission$MemberMissionBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/mapping/MemberMission.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/mapping/MemberMission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/mapping/MemberPrefer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/domain/mapping/MemberPrefer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/memberMissionRepository/MemberMissionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/memberMissionRepository/MemberMissionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/memberRepository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/memberRepository/MemberRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/memberRepository/MemberRepositoryCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/memberRepository/MemberRepositoryCustom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/memberRepository/MemberRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/memberRepository/MemberRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/reviewRepository/ReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/reviewRepository/ReviewRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/reviewRepository/ReviewRepositoryCustom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/repository/reviewRepository/ReviewRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/memberMissionService/MemberMissionCommandImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/memberMissionService/MemberMissionCommandImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/memberMissionService/MemberMissionCommandService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/memberMissionService/MemberMissionCommandService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/memberService/MemberQueryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/memberService/MemberQueryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/memberService/MemberQueryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/memberService/MemberQueryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/reviewService/ReviewCommandService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/reviewService/ReviewCommandService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/reviewService/ReviewCommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/service/reviewService/ReviewCommandServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/controller/TempController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/controller/TempController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/dto/MemberInfoDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/dto/TempRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/dto/TempResponse$TempExceptionDTO$TempExceptionDTOBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/dto/TempResponse$TempExceptionDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/dto/TempResponse$TempTestDTO$TempTestDTOBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/dto/TempResponse$TempTestDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/taewoo/study/web/dto/TempResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/generated/com/taewoo/study/domain/QMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated/com/taewoo/study/domain/QMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/code/status/ErrorStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/code/status/ErrorStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/exception/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/apiPayload/exception/ExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/converter/TempConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/converter/TempConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/domain/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/domain/enums/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/domain/mapping/MemberMission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/domain/mapping/MemberMission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/domain/mapping/MemberPrefer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/domain/mapping/MemberPrefer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/memberMissionRepository/MemberMissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/memberMissionRepository/MemberMissionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/memberRepository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/memberRepository/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/memberRepository/MemberRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/memberRepository/MemberRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/memberRepository/MemberRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/memberRepository/MemberRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/reviewRepository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/reviewRepository/ReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/reviewRepository/ReviewRepositoryCustom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/repository/reviewRepository/ReviewRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberMissionService/MemberMissionCommandImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberMissionService/MemberMissionCommandImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberMissionService/MemberMissionCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberMissionService/MemberMissionCommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberService/MemberQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberService/MemberQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberService/MemberQueryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/memberService/MemberQueryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/reviewService/ReviewCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/reviewService/ReviewCommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/reviewService/ReviewCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/service/reviewService/ReviewCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/controller/TempController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/controller/TempController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/MemberInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/memberDto/MemberInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/TempRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/tempDto/TempRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/TempResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/taewoo/study/web/dto/tempDto/TempResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,11 +164,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/week7" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -64,15 +194,15 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="feature/week8" />
-                    <option name="lastUsedInstant" value="1746607414" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1746604949" />
+                    <option name="lastUsedInstant" value="1746607698" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/week7" />
-                    <option name="lastUsedInstant" value="1746604948" />
+                    <option name="lastUsedInstant" value="1746607683" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1746607619" />
                   </RecentBranch>
                 </list>
               </option>
@@ -101,38 +231,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build study.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.StudyApplication.executor": "Run",
-    "git-widget-placeholder": "feature/week7",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/twkk0/Desktop/UMC/study",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "build.tools",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build study.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.StudyApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/week8&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/twkk0/Desktop/UMC/study&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="study" />
@@ -174,7 +304,9 @@
       <workItem from="1746425446121" duration="1827000" />
       <workItem from="1746603734809" duration="2622000" />
       <workItem from="1746606603932" duration="85000" />
-      <workItem from="1746606692331" duration="737000" />
+      <workItem from="1746606692331" duration="5899000" />
+      <workItem from="1746612730961" duration="23000" />
+      <workItem from="1746688705785" duration="22989000" />
     </task>
     <servers />
   </component>
