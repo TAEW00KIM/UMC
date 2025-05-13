@@ -1,2 +1,0 @@
-# UMC
-umc assignments
