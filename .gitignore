@@ -1,0 +1,153 @@
+# Created by https://www.toptal.com/developers/gitignore/api/java,maven,gradle,intellij,eclipse,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,maven,gradle,intellij,eclipse,visualstudiocode
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+logs/
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# .mvn/wrapper/maven-wrapper.jar # 주석 처리: mvnw를 사용한다면 이 파일은 커밋하는 것이 좋습니다. (필요시 주석 해제 또는 ! 규칙 사용)
+
+### Gradle ###
+.gradle
+build/
+# Ignore Gradle GUI config
+gradle-app.setting
+# Avoid ignoring Gradle wrapper files so they can be checked in (important)
+!gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Specific Gradle files
+# *.class # Java 섹션에 이미 포함되어 있음
+out/
+
+### IntelliJ IDEA ###
+# Covers .idea/workspace.xml, .idea/project.iml, .idea/modules.xml, .idea/*.iml, .idea/misc.xml, etc.
+.idea/
+
+# User-specific files
+.idea/shelf/
+.idea/sonarlint/
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# Built project files
+# out/ # Gradle 또는 IntelliJ 섹션에서 이미 처리됨 (중복될 수 있으나 유지해도 무방)
+
+# IntelliJ IDEA *.iml files (if not in .idea/)
+*.iml
+# IntelliJ IDEA *.ipr files (older format)
+*.ipr
+# IntelliJ IDEA *.iws files (older format)
+*.iws
+
+### Eclipse ###
+.project
+.classpath
+.settings/
+bin/
+tmp/
+# External tool builders
+.externalToolBuilders/
+# Locally stored information relative to build server.
+.buildpath
+
+### VisualStudioCode ###
+.vscode/
+# Ignore all local history of files
+.history
+
+### NetBeans ###
+nbproject/private/
+# build/ # Gradle 섹션에 이미 포함되어 있음
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Operating System Files ###
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+# Files that might appear in the root of a volume
+.Spotlight-V100
+.Trashes
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+### Application specific ###
+# ==============================================================================
+# 중요: 아래는 예시이며, 실제 프로젝트에서 사용하는 민감 정보 파일명으로 대체하거나 추가해야 합니다.
+# ==============================================================================
+
+# 로컬 환경에서만 사용하는 설정 파일 (실제 비밀번호 등이 포함된 경우)
+application-local.properties
+application-local.yml
+
+# 개발 환경 설정 파일 (팀 전체가 공유하는 내용이 아니라 개인 로컬 개발용이거나, 민감 정보 포함 시)
+application-dev.properties
+application-dev.yml
+
+# 운영 환경 또는 특정 환경의 민감 정보 포함 설정 파일
+application-prod.properties
+application-prod.yml
+application-real.properties
+application-real.yml
+application-secret.properties
+application-secret.yml
+secrets.properties
+credentials.json
+# 기타 민감 정보를 포함할 수 있는 파일명 패턴 추가 (예: *secret*.yml, *credentials*.json 등)
+
+# 업로드된 파일이나 생성된 임시 파일 저장 경로 (필요에 따라)
+# uploads/
+# temp/
+
+# .env 파일 (환경 변수 로드용)
+.env
+.env.local
+.env.*.local # .env.development.local, .env.test.local, .env.production.local 등
+
+### NPM / Yarn (프론트엔드 빌드 결과물이 있다면) ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# package-lock.json # 프로젝트에 따라 커밋 여부 결정 (일반적으로 커밋)
+# yarn.lock # 프로젝트에 따라 커밋 여부 결정 (일반적으로 커밋)
