@@ -159,6 +159,7 @@ src/main/java/com/taewoo/study/converter/MemberMissionConverter.java
 src/main/java/com/taewoo/study/converter/ReviewConverter.java
 src/main/java/com/taewoo/study/converter/StoreConverter.java
 src/main/java/com/taewoo/study/converter/TempConverter.java
+src/main/java/com/taewoo/study/converter/MemberPreferConverter.java
 
 src/main/java/com/taewoo/study/repository/foodCategoryRepository/
 src/main/java/com/taewoo/study/repository/memberMissionRepository/
