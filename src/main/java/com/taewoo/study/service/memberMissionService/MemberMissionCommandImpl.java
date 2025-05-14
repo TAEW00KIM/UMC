@@ -11,7 +11,7 @@ import com.taewoo.study.domain.enums.MissionStatus;
 import com.taewoo.study.domain.mapping.MemberMission;
 import com.taewoo.study.repository.memberMissionRepository.MemberMissionRepository;
 import com.taewoo.study.repository.memberRepository.MemberRepository;
-import com.taewoo.study.repository.mission.MissionRepository;
+import com.taewoo.study.repository.missionRepository.MissionRepository;
 import com.taewoo.study.web.dto.memberMissionDto.MissionChallengeRequestDTO;
 import com.taewoo.study.web.dto.memberMissionDto.MissionChallengeResponseDTO;
 import lombok.RequiredArgsConstructor;
