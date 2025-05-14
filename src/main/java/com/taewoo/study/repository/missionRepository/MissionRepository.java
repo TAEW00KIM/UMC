@@ -1,4 +1,4 @@
-package com.taewoo.study.repository.mission;
+package com.taewoo.study.repository.missionRepository;
 
 import com.taewoo.study.domain.Mission;
 import org.springframework.data.jpa.repository.JpaRepository;

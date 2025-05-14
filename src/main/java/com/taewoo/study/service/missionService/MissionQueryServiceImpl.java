@@ -1,7 +1,7 @@
 package com.taewoo.study.service.missionService;
 
 import com.taewoo.study.domain.Mission;
-import com.taewoo.study.repository.mission.MissionRepository;
+import com.taewoo.study.repository.missionRepository.MissionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
