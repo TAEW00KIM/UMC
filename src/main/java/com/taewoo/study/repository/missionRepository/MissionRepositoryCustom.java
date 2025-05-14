@@ -1,4 +1,4 @@
-package com.taewoo.study.repository.missionRepository;
+package com.taewoo.study.repository.mission;
 
 import com.taewoo.study.domain.Mission;
 
