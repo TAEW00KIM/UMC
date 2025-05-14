@@ -158,19 +158,14 @@ src/main/java/com/taewoo/study/converter/MemberMissionConverter.java
 src/main/java/com/taewoo/study/converter/MemberConverter.java
 src/main/java/com/taewoo/study/converter/MissionConverter.java
 src/main/java/com/taewoo/study/converter/TempConverter.java
-src/main/java/com/taewoo/study/converter/StoreConverter.java
 
 src/main/java/com/taewoo/study/repository/foodCategoryRepository/
-src/main/java/com/taewoo/study/repository/memberRepository/
 src/main/java/com/taewoo/study/repository/memberMissionRepository/
 src/main/java/com/taewoo/study/repository/mission/
-src/main/java/com/taewoo/study/repository/regionRepository/
-src/main/java/com/taewoo/study/repository/storeRepository/
 
 src/main/java/com/taewoo/study/service/memberMissionService/
 src/main/java/com/taewoo/study/service/memberService/
 src/main/java/com/taewoo/study/service/missionService/
-src/main/java/com/taewoo/study/service/storeService/
 src/main/java/com/taewoo/study/service/tempService/
 
 src/main/java/com/taewoo/study/validation/annotation/
