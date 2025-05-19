@@ -3,6 +3,7 @@ package com.taewoo.study.converter;
 import com.taewoo.study.domain.Member;
 import com.taewoo.study.domain.Review;
 import com.taewoo.study.domain.Store;
+import com.taewoo.study.web.dto.memberDto.MemberResponseDTO;
 import com.taewoo.study.web.dto.reviewDto.ReviewRequestDTO;
 import com.taewoo.study.web.dto.reviewDto.ReviewResponseDTO;
 import org.springframework.data.domain.Page;
@@ -50,6 +51,31 @@ public class ReviewConverter {
                 .totalElements(reviewList.getTotalElements())
                 .listSize(reviewPreviewDTOList.size())
                 .reviewList(reviewPreviewDTOList)
+                .build();
+    }
+
+    public static MemberResponseDTO.MyReviewDTO toMyReviewDTO(Review review) {
+        return MemberResponseDTO.MyReviewDTO.builder()
+                .storeName(review.getStore().getName())
+                .reviewId(review.getId())
+                .score(review.getScore())
+                .body(review.getBody())
+                .createdAt(review.getCreatedAt() != null ? review.getCreatedAt().toLocalDate() : null)
+                .build();
+    }
+
+    public static MemberResponseDTO.MyReviewListDTO toMyReviewListDTO(Page<Review> reviewPage) {
+        List<MemberResponseDTO.MyReviewDTO> myReviewDTOList = reviewPage.getContent().stream()
+                .map(ReviewConverter::toMyReviewDTO)
+                .collect(Collectors.toList());
+
+        return MemberResponseDTO.MyReviewListDTO.builder()
+                .reviewList(myReviewDTOList)
+                .listSize(myReviewDTOList.size())
+                .totalPage(reviewPage.getTotalPages())
+                .totalElements(reviewPage.getTotalElements())
+                .isFirst(reviewPage.isFirst())
+                .isLast(reviewPage.isLast())
                 .build();
     }
 }

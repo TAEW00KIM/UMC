@@ -152,3 +152,5 @@ yarn-debug.log*
 yarn-error.log*
 # package-lock.json # 프로젝트에 따라 커밋 여부 결정 (일반적으로 커밋)
 # yarn.lock # 프로젝트에 따라 커밋 여부 결정 (일반적으로 커밋)
+
+src/main/generated/
