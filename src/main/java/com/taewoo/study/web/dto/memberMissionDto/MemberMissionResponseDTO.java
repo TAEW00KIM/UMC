@@ -35,4 +35,15 @@ public class MemberMissionResponseDTO {
         Integer reward;
         LocalDate deadline;
     }
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class CompleteMissionResultDTO {
+        Long memberMissionId;
+        Long memberId;
+        Long missionId;
+        String newStatus;
+    }
 }
