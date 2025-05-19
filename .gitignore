@@ -55,6 +55,7 @@ out/
 ### IntelliJ IDEA ###
 # Covers .idea/workspace.xml, .idea/project.iml, .idea/modules.xml, .idea/*.iml, .idea/misc.xml, etc.
 .idea/
+.idea/workspace.xml
 
 # User-specific files
 .idea/shelf/
