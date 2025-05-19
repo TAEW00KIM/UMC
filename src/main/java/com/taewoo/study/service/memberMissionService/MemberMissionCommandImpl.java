@@ -11,7 +11,7 @@ import com.taewoo.study.domain.enums.MissionStatus;
 import com.taewoo.study.domain.mapping.MemberMission;
 import com.taewoo.study.repository.memberMissionRepository.MemberMissionRepository;
 import com.taewoo.study.repository.memberRepository.MemberRepository;
-import com.taewoo.study.repository.mission.MissionRepository;
+import com.taewoo.study.repository.missionRepository.MissionRepository;
 import com.taewoo.study.web.dto.memberMissionDto.MissionChallengeRequestDTO;
 import com.taewoo.study.web.dto.memberMissionDto.MissionChallengeResponseDTO;
 import lombok.RequiredArgsConstructor;
@@ -57,5 +57,24 @@ public class MemberMissionCommandImpl implements MemberMissionCommandService {
         memberMissionRepository.save(newChallenge);
 
         return MemberMissionConverter.toChallengeResultDTO(newChallenge);
+    }
+
+    @Override
+    @Transactional
+    public MemberMission completeChallengingMission(Long memberId, Long memberMissionId) {
+        MemberMission memberMission = memberMissionRepository.findById(memberMissionId)
+                .orElseThrow(() -> new MemberMissionHandler(ErrorStatus.MISSION_NOT_FOUND));
+
+        if (memberMission.getMember().getId() != memberId) {
+            throw new MemberMissionHandler(ErrorStatus._FORBIDDEN);
+        }
+
+        if (memberMission.getStatus() != MissionStatus.CHALLENGING) {
+            throw new MemberMissionHandler(ErrorStatus.ALREADY_CHALLENGING);
+        }
+
+        memberMission.setStatus(MissionStatus.COMPLETE);
+
+        return memberMission;
     }
 }

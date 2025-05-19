@@ -1,13 +1,24 @@
 package com.taewoo.study.web.controller;
 
 import com.taewoo.study.apiPayload.ApiResponse;
+import com.taewoo.study.converter.MemberMissionConverter;
+import com.taewoo.study.domain.mapping.MemberMission;
 import com.taewoo.study.service.memberMissionService.MemberMissionCommandService;
+import com.taewoo.study.service.memberMissionService.MemberMissionQueryService;
+import com.taewoo.study.validation.annotation.ValidPage;
+import com.taewoo.study.web.dto.memberMissionDto.MemberMissionResponseDTO;
 import com.taewoo.study.web.dto.memberMissionDto.MissionChallengeRequestDTO;
 import com.taewoo.study.web.dto.memberMissionDto.MissionChallengeResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,6 +27,7 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "회원 미션 관리 API")
 public class MemberMissionRestController {
     private final MemberMissionCommandService memberMissionCommandService;
+    private final MemberMissionQueryService memberMissionQueryService;
 
     @Operation(summary = "미션 상태 변경", description = "도전 상태 변경")
     @PostMapping("/{storeId}/missions/challenge")
@@ -24,5 +36,61 @@ public class MemberMissionRestController {
             @RequestBody @Valid MissionChallengeRequestDTO.ChallengeDTO request
             ) {
         return ApiResponse.onSuccess(memberMissionCommandService.challenge(storeId, request));
+    }
+
+    @GetMapping("/members/{memberId}/challenging")
+    @Operation(summary = "내가 진행 중인 미션 목록 조회 API", description = "특정 회원이 '도전중' 상태인 미션 목록을 페이징하여 조회")
+    @ApiResponses({
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "COMMON200", description = "성공"),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "MEMBER4001",
+                    description = "사용자가 없습니다.",
+                    content = @Content(schema = @Schema(implementation = ApiResponse.class))),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "COMMON400",
+                    description = "잘못된 요청입니다.",
+                    content = @Content(schema = @Schema(implementation = ApiResponse.class)))
+    })
+    @Parameters({
+            @Parameter(name = "memberId", description = "회원 ID(Path Variable)", required = true),
+            @Parameter(name = "page", description = "페이지 번호(Query String)")
+    })
+    public ApiResponse<MemberMissionResponseDTO.MyChallengingMissionListDTO> getMyChallengingMissions(
+            @PathVariable Long memberId,
+            @ValidPage @RequestParam(name = "page", defaultValue = "1") Integer page
+    ) {
+        Integer pageZero = page - 1;
+        Page<MemberMission> memberMissionPage = memberMissionQueryService.getMyChallengingMissions(memberId, pageZero);
+        return ApiResponse.onSuccess(MemberMissionConverter.toMyChallengingMissionListDTO(memberMissionPage));
+    }
+
+    @PatchMapping("/{memberMissionId}/members/{memberId}/complete")
+    @Operation(summary = "진행중인 미션 완료 처리 API", description = "회원이 진행 중인 특정 미션을 완료 상태로 변경")
+    @ApiResponses({
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "COMMON200", description = "성공"),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "MISSION4001",
+                    description = "해당 미션을 찾을 수 없습니다.",
+                    content = @Content(schema = @Schema(implementation = ApiResponse.class))),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "AUTH003",
+                    description = "권한이 없습니다.",
+                    content = @Content(schema = @Schema(implementation = ApiResponse.class))),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "STATUS001",
+                    description = "도전 중인 미션이 아닙니다.",
+                    content = @Content(schema = @Schema(implementation = ApiResponse.class)))
+    })
+    @Parameters({
+            @Parameter(name = "memberMissionId", description = "완료할 회원의 미션 ID (Path Variable)", required = true),
+            @Parameter(name = "memberId", description = "회원 ID (Path Variable)", required = true)
+    })
+    public ApiResponse<MemberMissionResponseDTO.CompleteMissionResultDTO> completeMission(
+            @PathVariable Long memberMissionId,
+            @PathVariable Long memberId
+    ) {
+        MemberMission completedMemberMission = memberMissionCommandService.completeChallengingMission(memberId, memberMissionId);
+        return ApiResponse.onSuccess(MemberMissionConverter.toCompleteMissionResultDTO(completedMemberMission));
     }
 }
