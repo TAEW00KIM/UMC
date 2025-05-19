@@ -63,4 +63,34 @@ public class MemberMissionRestController {
         Page<MemberMission> memberMissionPage = memberMissionQueryService.getMyChallengingMissions(memberId, pageZero);
         return ApiResponse.onSuccess(MemberMissionConverter.toMyChallengingMissionListDTO(memberMissionPage));
     }
+
+    @PatchMapping("/{memberMissionId}/members/{memberId}/complete")
+    @Operation(summary = "진행중인 미션 완료 처리 API", description = "회원이 진행 중인 특정 미션을 완료 상태로 변경")
+    @ApiResponses({
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "COMMON200", description = "성공"),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "MISSION4001",
+                    description = "해당 미션을 찾을 수 없습니다.",
+                    content = @Content(schema = @Schema(implementation = ApiResponse.class))),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "AUTH003",
+                    description = "권한이 없습니다.",
+                    content = @Content(schema = @Schema(implementation = ApiResponse.class))),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(
+                    responseCode = "STATUS001",
+                    description = "도전 중인 미션이 아닙니다.",
+                    content = @Content(schema = @Schema(implementation = ApiResponse.class)))
+    })
+    @Parameters({
+            @Parameter(name = "memberMissionId", description = "완료할 회원의 미션 ID (Path Variable)", required = true),
+            @Parameter(name = "memberId", description = "회원 ID (Path Variable)", required = true)
+    })
+    public ApiResponse<MemberMissionResponseDTO.CompleteMissionResultDTO> completeMission(
+            @PathVariable Long memberMissionId,
+            @PathVariable Long memberId
+    ) {
+        MemberMission completedMemberMission = memberMissionCommandService.completeChallengingMission(memberId, memberMissionId);
+        return ApiResponse.onSuccess(MemberMissionConverter.toCompleteMissionResultDTO(completedMemberMission));
+    }
 }

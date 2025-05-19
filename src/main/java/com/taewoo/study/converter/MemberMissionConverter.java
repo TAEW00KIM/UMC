@@ -43,4 +43,13 @@ public class MemberMissionConverter {
                 .isLast(memberMissionPage.isLast())
                 .build();
     }
+
+    public static MemberMissionResponseDTO.CompleteMissionResultDTO toCompleteMissionResultDTO(MemberMission memberMission) {
+        return MemberMissionResponseDTO.CompleteMissionResultDTO.builder()
+                .memberMissionId(memberMission.getId())
+                .memberId(memberMission.getMember().getId())
+                .missionId(memberMission.getMission().getId())
+                .newStatus(memberMission.getStatus().name())
+                .build();
+    }
 }
