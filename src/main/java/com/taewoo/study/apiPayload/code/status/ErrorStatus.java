@@ -41,7 +41,10 @@ public enum ErrorStatus implements BaseErrorCode {
     MISSON_NOT_IN_STORE(HttpStatus.BAD_REQUEST, "MISSION4002", "가게에 속해있지 않은 미션입니다."),
 
     // MemberMission Error
-    ALREADY_CHALLENGING(HttpStatus.BAD_REQUEST, "STATUS4001", "이미 도전 중인 미션입니다.");
+    ALREADY_CHALLENGING(HttpStatus.BAD_REQUEST, "STATUS4001", "이미 도전 중인 미션입니다."),
+
+    // Page Error
+    INVALID_PAGE(HttpStatus.BAD_REQUEST, "PAGE4001", "페이지 번호가 옳바르지 않습니다.");
 
     private final HttpStatus httpStatus;
     private final String code;

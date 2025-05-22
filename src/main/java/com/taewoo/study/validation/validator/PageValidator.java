@@ -1,8 +1,10 @@
 package com.taewoo.study.validation.validator;
 
+import com.taewoo.study.apiPayload.code.status.ErrorStatus;
 import com.taewoo.study.validation.annotation.ValidPage;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,8 +19,7 @@ public class PageValidator implements ConstraintValidator<ValidPage, Integer> {
 
         if (!isValid) {
             context.disableDefaultConstraintViolation();
-            context.buildConstraintViolationWithTemplate(context.getDefaultConstraintMessageTemplate())
-                    .addConstraintViolation();
+            context.buildConstraintViolationWithTemplate(ErrorStatus.INVALID_PAGE.toString()).addConstraintViolation();
         }
 
         return isValid;
