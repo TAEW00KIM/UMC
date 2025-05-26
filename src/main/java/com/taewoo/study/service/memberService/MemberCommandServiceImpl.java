@@ -11,6 +11,7 @@ import com.taewoo.study.repository.foodCategoryRepository.FoodCategoryRepository
 import com.taewoo.study.repository.memberRepository.MemberRepository;
 import com.taewoo.study.web.dto.memberDto.MemberRequestDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,10 +22,13 @@ import java.util.stream.Collectors;
 public class MemberCommandServiceImpl implements MemberCommandService {
     private final MemberRepository memberRepository;
     private final FoodCategoryRepository foodCategoryRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public Member joinMember(MemberRequestDTO.JoinDTO request) {
         Member newMember = MemberConverter.toMember(request);
+        newMember.encodePassword(passwordEncoder.encode(request.getPassword()));
+
         List<FoodCategory> foodCategoryList = request.getPreferCategory().stream()
                 .map(category -> {
                     return foodCategoryRepository.findById(category).orElseThrow(() ->

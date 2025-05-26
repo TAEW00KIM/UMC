@@ -2,6 +2,7 @@ package com.taewoo.study.domain;
 import com.taewoo.study.domain.common.BaseEntity;
 import com.taewoo.study.domain.enums.Gender;
 import com.taewoo.study.domain.enums.MemberStatus;
+import com.taewoo.study.domain.enums.Role;
 import com.taewoo.study.domain.enums.SocialType;
 import com.taewoo.study.domain.mapping.MemberAgree;
 import com.taewoo.study.domain.mapping.MemberMission;
@@ -32,6 +33,12 @@ public class Member extends BaseEntity {
     @Column(nullable = false, length = 20)
     private String name;
 
+    @Column(nullable = false)
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
     @Column(nullable = false, length = 40)
     private String address;
 
@@ -42,7 +49,7 @@ public class Member extends BaseEntity {
     @Column(columnDefinition = "VARCHAR(10)")
     private Gender gender;
 
-    @Column(nullable = false)
+    // @Column(nullable = false)
     private Integer age;
 
     @Enumerated(EnumType.STRING)
@@ -58,7 +65,7 @@ public class Member extends BaseEntity {
     @ColumnDefault("0")
     private Integer point;
 
-    @Column(nullable = false)
+    // @Column(nullable = false)
     @ColumnDefault("'010-0000-0000'")
     private String phone;
 
@@ -75,4 +82,8 @@ public class Member extends BaseEntity {
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberMission> memberMissionList = new ArrayList<>();
+
+    public void encodePassword(String password) {
+        this.password = password;
+    }
 }
