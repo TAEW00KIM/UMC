@@ -2,6 +2,7 @@ package com.taewoo.study.domain;
 import com.taewoo.study.domain.common.BaseEntity;
 import com.taewoo.study.domain.enums.Gender;
 import com.taewoo.study.domain.enums.MemberStatus;
+import com.taewoo.study.domain.enums.Role;
 import com.taewoo.study.domain.enums.SocialType;
 import com.taewoo.study.domain.mapping.MemberAgree;
 import com.taewoo.study.domain.mapping.MemberMission;
@@ -52,8 +53,14 @@ public class Member extends BaseEntity {
     @Column(columnDefinition = "VARCHAR(15) DEFAULT 'ACTIVE'")
     private MemberStatus memberStatus;
 
-    // @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 50, unique = true)
     private String email;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @ColumnDefault("0")
     private Integer point;
@@ -75,4 +82,8 @@ public class Member extends BaseEntity {
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberMission> memberMissionList = new ArrayList<>();
+
+    public void encodePassword(String password) {
+        this.password = password;
+    }
 }

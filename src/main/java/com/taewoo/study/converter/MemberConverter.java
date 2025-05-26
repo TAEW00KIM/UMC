@@ -32,14 +32,37 @@ public class MemberConverter {
         }
 
         return Member.builder()
+                .name(request.getName())
+                .email(request.getEmail())
+                .password(request.getPassword())
+                .gender(gender)
                 .age(request.getAge())
                 .address(request.getAddress())
                 .specAddress(request.getSpecAddress())
-                .gender(gender)
-                .point(request.getPoint() == null ? 0 : request.getPoint())
-                .name(request.getName())
-                .phone(request.getPhone() == null ? "010-0000-0000" : request.getPhone())
+                .role(request.getRole())
+                .point(request.getPoint() != null ? request.getPoint() : 0)
+                .phone(request.getPhone())
                 .memberPreferList(new ArrayList<>())
+                .build();
+    }
+
+    public static MemberResponseDTO.LoginResultDTO toLoginResultDTO(Long memberId, String accessToken) {
+        return MemberResponseDTO.LoginResultDTO.builder()
+                .memberId(memberId)
+                .accessToken(accessToken)
+                .build();
+    }
+
+    public static MemberResponseDTO.MemberInfoDTO toMemberInfoDTO(Member member) {
+        String genderString = null;
+        if (member.getGender() != null) {
+            genderString = member.getGender().name();
+        }
+
+        return MemberResponseDTO.MemberInfoDTO.builder()
+                .name(member.getName())
+                .email(member.getEmail())
+                .gender(genderString)
                 .build();
     }
 }
